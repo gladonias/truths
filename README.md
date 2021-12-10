@@ -10,8 +10,8 @@ truths is a simple tool that allows you to quickly generate a truth table from p
 start by creating some base variables
 
 ```python
-import truths
-print(truths.Truths(['a', 'b', 'x']))
+from truths.truths import Truths
+print(Truths(['a', 'b', 'x']))
 ```
 ```
 +---+---+---+
@@ -34,7 +34,7 @@ now let's use those base variables and pass in some phrases! your base variables
 python variable names. the phrases also have to be valid python
 
 ```python
-from truths import Truths
+from truths.truths import Truths
 print(Truths(['a', 'b', 'cat', 'has_address'], ['(a and b)', 'a and b or cat', 'a and (b or cat) or has_address']))
 ```
 ```
@@ -65,7 +65,7 @@ print(Truths(['a', 'b', 'cat', 'has_address'], ['(a and b)', 'a and b or cat', '
 neat eh? if you prefer True/False over the numbers pass `ints=False`:
 
 ```python
-from truths import Truths
+from truths.truths import Truths
 print(Truths(['a', 'b', 'x', 'd'], ['(a and b)', 'a and b or x', 'a and (b or x) or d'], ints=False))
 ```
 ```
